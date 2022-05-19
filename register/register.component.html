@@ -1,0 +1,27 @@
+
+  
+  <div class="modal modal-sheet position-static d-block bg-secondary py-5" tabindex="-1" role="dialog" id="modalSheet">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content rounded-4 shadow">
+        <div class="modal-header border-bottom-0">
+          <h5 class="modal-title">Lauras Login Application</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" [routerLink]="['/background']"></button>
+        </div>
+        <form (ngSubmit)="onSubmit()" class="modal-body py-0 px-5" >
+          <span>Create a new account</span><br>
+          <label for="fname">Name</label><br>
+          <input type="text" id="username" name="uname" placeholder="Name" [(ngModel)]="user.name"><br>
+          <label for="lname">Email:</label><br>
+          <input type="text" id="email" name="email" placeholder="Email" [(ngModel)]="user.email"><br>
+          <label for="lname">Password:</label><br>
+          <input type="password" id="password" name="pwd" placeholder="Password" [(ngModel)]="user.password"><br>
+          <br>
+          <button type="submit"  class="btn btn-lg btn-dark w-100 mx-0 mb-2">Register</button>
+    
+        </form> 
+        <div class="modal-footer flex-column border-top-0">
+          <button type="button"  [routerLink]="['/login']" class="btn btn-lg btn-light w-100 mx-0" data-bs-dismiss="modal">Alredy have an account?</button>
+        </div>
+      </div>
+    </div>
+  </div>
